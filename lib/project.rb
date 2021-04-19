@@ -6,8 +6,8 @@ class Project #has many
     @backers = []
   end
 
-  def add_backer(backers)
-    @backers<<backers
+  def add_backer(back)
+    @backers<<back
     backer.back_project(self)
   end
 end

@@ -1,4 +1,4 @@
-class Project
+class Project #has many
   attr_accessor :title, :backers
 
   def initialize(title)
@@ -8,5 +8,6 @@ class Project
 
   def add_backer(backer)
     @backers<<backer
+    Backer.backed_projects << self
   end
 end
